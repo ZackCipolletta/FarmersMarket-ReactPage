@@ -1,15 +1,12 @@
 import React from 'react';
 import Header from './Header';
 import DatePicker from './DatePicker';
-import Schedule from './Schedule';
-import ProduceList from './ProduceList';
 
 function App() {
   return (
     <React.Fragment>
-      <Header />
+      <div class="border rounded border-dark text-center mb-3 mx-5"><Header /></div>
       <DatePicker />
-
     </React.Fragment>
   );
 }

@@ -58,11 +58,26 @@ class DatePicker extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {dropDownMenu}
-        <button onClick={this.GetDate} className="dropbtn">Submit</button>
-        <Schedule selectedDay={this.state.selectedDay} />
-        {/* <Schedule /> */}
-        <ProduceList monthSelected={this.state.selectedMonth} selectedMonth={this.state.selectedMonth} />
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 mr-4">
+              <div name="datePicker" class="border rounded border-dark p-3 px-4 mt-5" >
+                {dropDownMenu}
+                <button onClick={this.GetDate} className="dropbtn">Submit</button>
+              </div>
+            </div>
+            <div class="col-md-9 ml-4">
+              <div class="row">
+                <div name="schedule" class="col-md-12 border rounded border-dark mb-3">
+                  <Schedule selectedDay={this.state.selectedDay} />
+                </div>
+                <div name="selectedMonth" class="col-md-12 border rounded border-dark">
+                  <ProduceList monthSelected={this.state.selectedMonth} selectedMonth={this.state.selectedMonth} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </React.Fragment>
     );
   }
